@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Apocalipse Zumbi</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- =========================
+             TELA INICIAL
+        ========================== -->
+
+        <section id="inicio" class="inicio">
+
+            <div class="inicio-conteudo">
+
+                <div class="zumbi-grande">
+                    🧟
+                </div>
+
+                <div class="tag">
+                    TESTE DE SOBREVIVÊNCIA
+                </div>
+
+                <h1>
+                    VOCÊ SOBREVIVERIA
+                    <span>AO APOCALIPSE ZUMBI?</span>
+                </h1>
+
+                <p>
+                    O mundo foi tomado pelos mortos-vivos.
+                    Você terá que tomar decisões rápidas para
+                    descobrir se conseguiria sobreviver.
+                </p>
+
+                <div class="informacoes">
+
+                    <div>
+                        <strong>6</strong>
+                        <small>Perguntas</small>
+                    </div>
+
+                    <div>
+                        <strong>4</strong>
+                        <small>Alternativas</small>
+                    </div>
+
+                    <div>
+                        <strong>10</strong>
+                        <small>Máx. pontos</small>
+                    </div>
+
+                </div>
+
+                <button id="btnComecar" class="btn-comecar">
+                    COMEÇAR O QUIZ
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ÁREA DO QUIZ
+        ========================== -->
+
+        <section id="quizArea" class="quiz-area hidden">
+
+            <header class="cabecalho">
+
+                <div class="icone-cabecalho">
+                    🧟
+                </div>
+
+                <div>
+                    <h2>APOCALIPSE ZUMBI</h2>
+                    <p>Teste suas habilidades de sobrevivência</p>
+                </div>
+
+            </header>
+
+
+            <div class="barra-topo">
+
+                <span id="contador">
+                    Pergunta 1 de 6
+                </span>
+
+                <span id="pontuacao">
+                    0 pontos
+                </span>
+
+            </div>
+
+
+            <div id="quiz">
+                <!-- Pergunta inserida pelo JavaScript -->
+            </div>
+
+
+            <div id="resultado" class="resultado hidden">
+                <!-- Resultado inserido pelo JavaScript -->
+            </div>
+
+
+            <button id="btnReiniciar" class="btn-reiniciar hidden">
+                🔄 JOGAR NOVAMENTE
+            </button>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

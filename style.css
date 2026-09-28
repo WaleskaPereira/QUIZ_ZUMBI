@@ -1,0 +1,723 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            #27452e 0%,
+            #101810 35%,
+            #050705 75%
+        );
+}
+
+
+/* =================================
+   CONTAINER
+================================= */
+
+.container {
+    width: 100%;
+    max-width: 720px;
+}
+
+
+/* =================================
+   TELA INICIAL
+================================= */
+
+.inicio {
+    position: relative;
+
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            rgba(4, 9, 5, 0.72),
+            rgba(5, 10, 6, 0.96)
+        ),
+        linear-gradient(
+            135deg,
+            #263d2b,
+            #0a0f0b
+        );
+
+    border: 1px solid #304a36;
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.7);
+}
+
+
+/* luz verde */
+
+.inicio::before {
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    top: -170px;
+    right: -120px;
+
+    border-radius: 50%;
+
+    background: rgba(70, 170, 80, 0.18);
+
+    filter: blur(70px);
+}
+
+
+/* segunda luz */
+
+.inicio::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    bottom: -150px;
+    left: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(100, 180, 80, 0.10);
+
+    filter: blur(60px);
+}
+
+
+.inicio-conteudo {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 590px;
+
+    padding: 45px 30px;
+
+    text-align: center;
+}
+
+
+/* =================================
+   ZUMBI
+================================= */
+
+.zumbi-grande {
+    font-size: 85px;
+
+    margin-bottom: 15px;
+
+    animation: flutuar 2s infinite ease-in-out;
+
+    filter:
+        drop-shadow(
+            0 0 20px rgba(100, 220, 110, 0.25)
+        );
+}
+
+
+@keyframes flutuar {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* =================================
+   TAG
+================================= */
+
+.tag {
+    display: inline-block;
+
+    padding: 7px 14px;
+
+    margin-bottom: 18px;
+
+    border-radius: 20px;
+
+    background: rgba(126, 231, 135, 0.08);
+
+    border: 1px solid #36543d;
+
+    color: #7ee787;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* =================================
+   TITULO
+================================= */
+
+.inicio h1 {
+    font-size: 42px;
+
+    line-height: 1.1;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 20px;
+}
+
+.inicio h1 span {
+    display: block;
+
+    color: #7ee787;
+
+    margin-top: 5px;
+}
+
+
+/* =================================
+   DESCRIÇÃO
+================================= */
+
+.inicio p {
+    color: #aeb9b1;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 28px;
+}
+
+
+/* =================================
+   INFORMAÇÕES
+================================= */
+
+.informacoes {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 32px;
+}
+
+
+.informacoes div {
+    width: 125px;
+
+    padding: 14px 8px;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid #28392d;
+}
+
+
+.informacoes strong {
+    display: block;
+
+    color: #7ee787;
+
+    font-size: 23px;
+
+    margin-bottom: 4px;
+}
+
+
+.informacoes small {
+    color: #89968d;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* =================================
+   BOTÃO COMEÇAR
+================================= */
+
+.btn-comecar {
+    border: none;
+
+    padding: 18px 32px;
+
+    border-radius: 12px;
+
+    background: #65c46b;
+
+    color: #071008;
+
+    font-size: 16px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 30px rgba(75, 190, 85, 0.2);
+
+    transition: 0.25s;
+}
+
+
+.btn-comecar span {
+    display: inline-block;
+
+    margin-left: 8px;
+
+    font-size: 20px;
+
+    transition: 0.25s;
+}
+
+
+.btn-comecar:hover {
+    background: #7ee787;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 35px rgba(75, 190, 85, 0.3);
+}
+
+
+.btn-comecar:hover span {
+    transform: translateX(5px);
+}
+
+
+/* =================================
+   ÁREA DO QUIZ
+================================= */
+
+.quiz-area {
+    padding: 30px;
+
+    border-radius: 20px;
+
+    background: #111812;
+
+    border: 1px solid #304534;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.6);
+}
+
+
+/* =================================
+   CABEÇALHO
+================================= */
+
+.cabecalho {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #26372b;
+}
+
+
+.icone-cabecalho {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #1c2b20;
+
+    font-size: 28px;
+}
+
+
+.cabecalho h2 {
+    font-size: 18px;
+
+    color: #7ee787;
+
+    margin-bottom: 4px;
+}
+
+
+.cabecalho p {
+    color: #7f8c82;
+
+    font-size: 12px;
+}
+
+
+/* =================================
+   BARRA
+================================= */
+
+.barra-topo {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin: 22px 0;
+
+    color: #8d9b91;
+
+    font-size: 13px;
+}
+
+
+#pontuacao {
+    color: #7ee787;
+
+    font-weight: bold;
+}
+
+
+/* =================================
+   PERGUNTA
+================================= */
+
+.pergunta-numero {
+    color: #7ee787;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+}
+
+
+.pergunta {
+    font-size: 24px;
+
+    line-height: 1.4;
+
+    margin-bottom: 25px;
+}
+
+
+/* =================================
+   ALTERNATIVAS
+================================= */
+
+.alternativas {
+    display: grid;
+
+    gap: 12px;
+}
+
+
+.alternativa {
+    width: 100%;
+
+    padding: 17px;
+
+    border-radius: 12px;
+
+    border: 1px solid #304436;
+
+    background: #19221b;
+
+    color: #e8eee9;
+
+    font-size: 15px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.alternativa:hover {
+    background: #243328;
+
+    border-color: #65c46b;
+
+    transform: translateX(4px);
+}
+
+
+.alternativa:disabled {
+    cursor: default;
+}
+
+
+/* =================================
+   FEEDBACK
+================================= */
+
+.feedback {
+    margin-top: 20px;
+
+    padding: 16px;
+
+    border-radius: 12px;
+
+    line-height: 1.5;
+
+    font-size: 14px;
+
+    text-align: center;
+
+    font-weight: bold;
+}
+
+
+.feedback.morreu {
+    color: #ff7777;
+
+    background: rgba(190, 40, 40, 0.12);
+
+    border: 1px solid #8f3030;
+}
+
+
+.feedback.cuidado {
+    color: #ffd75c;
+
+    background: rgba(210, 170, 40, 0.10);
+
+    border: 1px solid #8b7427;
+}
+
+
+.feedback.sobreviveu {
+    color: #7ee787;
+
+    background: rgba(70, 190, 80, 0.10);
+
+    border: 1px solid #3d7945;
+}
+
+
+/* =================================
+   BOTÃO PRÓXIMA
+================================= */
+
+.proxima {
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #65c46b;
+
+    color: #071008;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.proxima:hover {
+    background: #7ee787;
+
+    transform: translateY(-2px);
+}
+
+
+/* =================================
+   RESULTADO
+================================= */
+
+.resultado {
+    padding: 35px 20px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    background: #18221b;
+
+    border: 1px solid #344c38;
+}
+
+
+.resultado-emoji {
+    font-size: 70px;
+
+    margin-bottom: 10px;
+}
+
+
+.resultado h2 {
+    font-size: 30px;
+
+    margin-bottom: 12px;
+}
+
+
+.resultado .pontuacao-final {
+    color: #7ee787;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+
+.resultado p {
+    color: #aeb9b1;
+
+    line-height: 1.6;
+}
+
+
+/* =================================
+   REINICIAR
+================================= */
+
+.btn-reiniciar {
+    width: 100%;
+
+    margin-top: 18px;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    border: 1px solid #4d7b54;
+
+    background: transparent;
+
+    color: #7ee787;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.btn-reiniciar:hover {
+    background: #65c46b;
+
+    color: #071008;
+}
+
+
+/* =================================
+   HIDDEN
+================================= */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =================================
+   RESPONSIVO
+================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .inicio {
+        min-height: 620px;
+    }
+
+    .inicio-conteudo {
+        padding: 30px 20px;
+    }
+
+    .zumbi-grande {
+        font-size: 65px;
+    }
+
+    .inicio h1 {
+        font-size: 29px;
+    }
+
+    .inicio p {
+        font-size: 14px;
+    }
+
+    .informacoes div {
+        width: 95px;
+    }
+
+    .quiz-area {
+        padding: 20px 16px;
+    }
+
+    .pergunta {
+        font-size: 20px;
+    }
+
+    .alternativa {
+        padding: 15px;
+    }
+}
